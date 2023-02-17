@@ -49,26 +49,33 @@
 # /aprendiendoando-wp-theme-github-resources/
 
 # Decode CMS
-/decodecms/
-# /decodecms/conf/
-# /decodecms/logs/
+# /decodecms/
+/decodecms/conf/
+/decodecms/logs/
 
-# /decodecms/app/public/*.php
-# /decodecms/app/public/.htaccess
-# /decodecms/app/public/license.txt
-# /decodecms/app/public/readme.html
-# /decodecms/app/public/wp-admin/
-# /decodecms/app/public/wp-includes/
+/decodecms/app/public/*.php
+/decodecms/app/public/.htaccess
+/decodecms/app/public/license.txt
+/decodecms/app/public/readme.html
+/decodecms/app/public/wp-admin/
+# /decodecms/app/public/wp-content/
+/decodecms/app/public/wp-includes/
 
-# /decodecms/app/public/wp-content/*.php
-# /decodecms/app/public/wp-content/plugins/
-# /decodecms/app/public/wp-content/upgrade/
-# /decodecms/app/public/wp-content/uploads/
+/decodecms/app/public/wp-content/*.php
+/decodecms/app/public/wp-content/plugins/
+# /decodecms/app/public/wp-content/themes/
+/decodecms/app/public/wp-content/upgrade/
+/decodecms/app/public/wp-content/uploads/
 
-# /decodecms/app/public/wp-content/themes/*.php
+/decodecms/app/public/wp-content/themes/*.php
 
-# /decodecms/app/public/wp-content/themes/hello-elementor/assets/
-# /decodecms/app/public/wp-content/themes/hello-elementor/includes/
+# Hello Elementor
+/decodecms/app/public/wp-content/themes/hello-elementor/assets/
+/decodecms/app/public/wp-content/themes/hello-elementor/includes/
+
+# Twenty Seventeen
+/decodecms/app/public/wp-content/themes/twentyseventeen/assets/
+/decodecms/app/public/wp-content/themes/twentyseventeen/inc/
 
 # =============================================================
 # Archivos
