@@ -1,0 +1,76 @@
+# G:\Mi unidad\Developer\LOCAL
+# El repositorio local se encuentra en
+# G:\Mi unidad\Developer\LOCAL\.git
+# =============================================================
+# Rutas y/o carpetas
+# G:\Mi unidad\Developer\LOCAL
+.vscode
+# /acf/
+/elementor-test/
+# /plugins/
+# =============================================================
+# Solo se suben los archivos del curso, no los de WordPress
+
+# AprendiendoAndo WP Theme
+# /aprendiendoando-wp-theme/
+/aprendiendoando-wp-theme/conf/
+/aprendiendoando-wp-theme/logs/
+
+# /aprendiendoando-wp-theme/app/sql
+
+/aprendiendoando-wp-theme/app/public/*.php
+/aprendiendoando-wp-theme/app/public/.htaccess
+/aprendiendoando-wp-theme/app/public/license.txt
+/aprendiendoando-wp-theme/app/public/readme.html
+/aprendiendoando-wp-theme/app/public/wp-admin/
+# /aprendiendoando-wp-theme/app/public/wp-content/
+/aprendiendoando-wp-theme/app/public/wp-includes/
+
+/aprendiendoando-wp-theme/app/public/wp-content/*.php
+/aprendiendoando-wp-theme/app/public/wp-content/languages/
+/aprendiendoando-wp-theme/app/public/wp-content/mu-plugins/
+/aprendiendoando-wp-theme/app/public/wp-content/plugins/
+# /aprendiendoando-wp-theme/app/public/wp-content/themes/
+/aprendiendoando-wp-theme/app/public/wp-content/upgrade/
+/aprendiendoando-wp-theme/app/public/wp-content/uploads/
+/aprendiendoando-wp-theme/app/public/wp-content/wpvivid_staging/
+/aprendiendoando-wp-theme/app/public/wp-content/WPvivid_Uploads/
+/aprendiendoando-wp-theme/app/public/wp-content/wpvividbackups/
+
+/aprendiendoando-wp-theme/app/public/wp-content/themes/*.php
+# /aprendiendoando-wp-theme/app/public/wp-content/themes/aprendiendoando/
+/aprendiendoando-wp-theme/app/public/wp-content/themes/twentytwentyone/
+/aprendiendoando-wp-theme/app/public/wp-content/themes/twentytwentythree/
+/aprendiendoando-wp-theme/app/public/wp-content/themes/twentytwentytwo/
+
+/aprendiendoando-wp-theme/app/public/wp-content/themes/aprendiendoando/assets/
+# /aprendiendoando-wp-theme/app/public/wp-content/themes/aprendiendoando/images/
+
+# /aprendiendoando-wp-theme-github-resources/
+
+# Decode CMS
+/decodecms/
+# /decodecms/conf/
+# /decodecms/logs/
+
+# /decodecms/app/public/*.php
+# /decodecms/app/public/.htaccess
+# /decodecms/app/public/license.txt
+# /decodecms/app/public/readme.html
+# /decodecms/app/public/wp-admin/
+# /decodecms/app/public/wp-includes/
+
+# /decodecms/app/public/wp-content/*.php
+# /decodecms/app/public/wp-content/plugins/
+# /decodecms/app/public/wp-content/upgrade/
+# /decodecms/app/public/wp-content/uploads/
+
+# /decodecms/app/public/wp-content/themes/*.php
+
+# /decodecms/app/public/wp-content/themes/hello-elementor/assets/
+# /decodecms/app/public/wp-content/themes/hello-elementor/includes/
+
+# =============================================================
+# Archivos
+desktop.ini
+# .gitignore
