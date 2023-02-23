@@ -11,6 +11,7 @@
 # =============================================================
 # Solo se suben los archivos del curso, no los de WordPress
 
+# -------------------------------------------------------------
 # AprendiendoAndo WP Theme
 # /aprendiendoando-wp-theme/
 /aprendiendoando-wp-theme/conf/
@@ -48,6 +49,7 @@
 
 # /aprendiendoando-wp-theme-github-resources/
 
+# -------------------------------------------------------------
 # Decode CMS
 # /decodecms/
 /decodecms/conf/
@@ -77,6 +79,9 @@
 /decodecms/app/public/wp-content/themes/twentyseventeen/assets/
 /decodecms/app/public/wp-content/themes/twentyseventeen/inc/
 
+# -------------------------------------------------------------
+# Exploring.org Production
+/exploring/
 # =============================================================
 # Archivos
 desktop.ini

@@ -25,6 +25,13 @@ if (!defined('ABSPATH')) {
             the_archive_description('<p class="archive-description">', '</p>');
             ?>
         </header>
+
+        <?php
+        echo "<br>parent_id = " . $parent_id;
+        echo "<br>taxonomy = " . $taxonomy;
+        echo "<br>extradata_tax = " . $extradata_tax;
+        ?>
+
         <h2>HEADER ends</h2>
 
     <?php endif; ?>
@@ -106,48 +113,115 @@ if (!defined('ABSPATH')) {
                                 //     'child_of' => $termID, 'orderby'       =>  'term_order',
                                 //     'hide_empty'    => false
                                 // ));
-                                $termchildren = get_terms(array(
-                                    'taxonomy' => $taxonomyName,
-                                    'child_of' => $termID,
-                                    // 'orderby' => 'term_order',
-                                    'orderby' => 'name',
-                                    'order' => 'ASC',
-                                    'hide_empty' => false,
-                                ));
-                                // $termchildren = get_terms($taxonomyName);
+                                $termchildren = get_terms($taxonomyName);
 
-
-                                echo "<br>parent_id = " . $parent_id;
-                                echo "<br>taxonomy = " . $taxonomy;
-                                echo "<br>extradata_tax = " . $extradata_tax;
-
-                                echo "<br>termID -> " . $termID;
-                                echo "<br>taxonomyName -> " . $taxonomyName;
-                                // echo "<br>termchildren -> " . var_dump($termchildren) . "<br>";
+                                echo "<br>termID -> " . $termID . "<br>";
+                                echo "<br>taxonomyName -> " . $taxonomyName . "<br>";
+                                echo "<br>termchildren -> " . var_dump($termchildren) . "<br>";
                                 echo "<br>count termchildren -> " . count($termchildren) . "<br>";
-                                echo "<br>!empty(termchildren) -> " . !empty($termchildren) . "<br>";
+                                // echo "<br>termchildren -> " . $termchildren . "<br>";
 
                                 // get_term_children($termID, $taxonomyName);
 
                                 if (!empty($termchildren)) {
-                                    echo "<br>Inside IF !empty(termchildren)";
+                                    foreach ($termchildren as $child) {
+
+                                        echo "<br>child->count -> " . $child->count . "<br>";
+                                        if ($child->count > 0) {
+
+                                            // if (term_is_ancestor_of(47, $termID, 'activity-library-category') or is_term(47, 'activity-library-category')) :
+                                                echo "<br>child->term_id -> " . $child->term_id . "<br>";
+                                                $link = get_term_link($child->term_id, $taxonomyName);
+                                                echo "<br>link -> " . $link . "<br>";
+                                                echo "<br>child->name -> " . $child->name . "<br>";
+                                                echo "<br>child->description -> " . $child->description . "<br>";
+                                            // else :
+                                                // $link = '#';
+                                            // endif;
+                                ?>
+                                            <div class="item">
+
+                                                <?php if ($link == '#') { ?>
+
+                                                    <div class="soon soon-small">
+                                                        <span>Coming Soon</span>
+                                                    </div>
+
+                                                <?php } ?>
+
+                                                <div class="image <?php if ($link == '#') {
+                                                                        echo ' bw';
+                                                                    } ?>">
+                                                    <a href="<?php echo $link; ?>">
+                                                        <img src="<?php echo z_taxonomy_image_url($child->term_id, 'thumbnail'); ?>" />
+                                                    </a>
+                                                </div>
+
+                                                <div class="text">
+
+                                                    <span class="itemTitle">
+                                                        <a href="<?php echo $link; ?>">
+                                                            <?php echo $child->name; ?>
+                                                        </a>
+                                                    </span>
+
+                                                    <span><?php echo $child->description; ?></span>
+
+                                                </div>
+
+                                                <a href="<?php echo $link; ?>">
+                                                    <span class="arrow"></span>
+                                                </a>
+
+                                            </div>
+                                        <?php }
+                                    }
 
                                     foreach ($termchildren as $child) {
 
-                                        $childLink = get_term_link($child->term_id, $taxonomyName);
-                                        echo "<br><br>Inside foreach (termchildren as child)<br>";
+                                        if ($child->count == 0) {
+                                            $link = get_term_link($child->term_id, $taxonomy_name);
+                                        ?>
 
-                                        echo "<br>child->term_id -> " . $child->term_id;
-                                        echo "<br>child->name -> " . $child->name;
-                                        echo "<br>child->description -> " . $child->description;
-                                        echo "<br>childLink -> " . $childLink;
+                                            <div class="item no-posts">
 
-                                        echo "<br><a href='" . $childLink . "'>" . $child->name . "</a>";
+                                                <div class="soon soon-small">
+                                                    <span>Coming Soon</span>
+                                                </div>
+
+                                                <div class="image">
+                                                    <a href="<?php echo $link; ?>">
+                                                        <img src="<?php echo z_taxonomy_image_url($child->term_id, 'thumbnail'); ?>" />
+                                                    </a>
+                                                </div>
+
+                                                <div class="text">
+
+                                                    <span class="itemTitle">
+                                                        <a href="<?php echo $link; ?>"><?php echo $child->name; ?></a>
+                                                    </span>
+
+                                                    <span><?php echo $child->description; ?></span>
+
+                                                </div>
+
+                                                <a href="<?php echo $link; ?>"><span class="arrow"></span></a>
+
+                                            </div>
+                                        <?php }
                                     }
                                 } else {
-                                    echo "<br>SHOW THIS ACTIVITY LIBRARY CATEGORY posts";
                                     while (have_posts()) :
                                         the_post();
+                                        ?>
+
+                                        <?php
+                                        /*
+						  if (term_is_ancestor_of(47, $termID, 'activity-library-category') or is_term(47, 'activity-library-category')): 
+							$link = get_the_permalink();
+							else:
+							$link = '#';
+							endif; */
                                         //$link = get_the_permalink();
                                         if (get_field('external_link')) :
                                             $link = get_field('external_link');
@@ -194,7 +268,9 @@ if (!defined('ABSPATH')) {
                                         </div>
                                 <?php
                                     endwhile;
-                                } // else
+                                }
+                                ?>
+                                <?php //wp_pagenavi(); 
                                 ?>
 
                             </div> <!--/rightColumnActivity -->

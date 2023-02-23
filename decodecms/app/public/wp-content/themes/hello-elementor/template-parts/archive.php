@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
 }
 ?>
 <main id="content" class="site-main" role="main">
-	<h2>HELLO ELEMENTOR archive.php</h2>
+	<h2>HELLO ELEMENTOR -> archive.php</h2>
 	<?php if (apply_filters('hello_elementor_page_title', true)) : ?>
 		<header class="page-header">
 			<?php
