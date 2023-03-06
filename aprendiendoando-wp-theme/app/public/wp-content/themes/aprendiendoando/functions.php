@@ -18,7 +18,12 @@ if (function_exists('add_theme_support')) {
     // additional image sizes
     // delete the next line if you do not need additional image sizes
     // add_image_size('category-thumb', 300, 9999); //300 pixels wide (and unlimited height)
-    add_image_size('category-thumb', 374, 260, true); //300 pixels wide (and unlimited height)
+    add_image_size('category-thumb-374-260', 374, 260, true); //300 pixels wide (and unlimited height)
+    add_image_size('category-thumb-580-272', 580, 272, true); //300 pixels wide (and unlimited height)
+
+    add_image_size('category-full-783-290', 783, 290, true); //300 pixels wide (and unlimited height)
+
+
 }
 
 

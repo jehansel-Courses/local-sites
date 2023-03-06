@@ -28,7 +28,9 @@
 						query_posts(
 							array(
 								"posts_per_page" => 6,
-								"category_name" => "portafolio"
+								"category_name" => "portafolio",
+								"orderby" => "title",
+								"order" => "ASC"
 							)
 						);
 						?>
@@ -37,7 +39,17 @@
 								<div class="4u 12u(mobile)">
 									<!-- post -->
 									<section class="box">
-										<a href="#" class="image featured"><img src="<?php bloginfo('template_directory'); ?>/images/pic02.jpg" alt="" /></a>
+										<!-- <a href="#" class="image featured"><img src="<?php //bloginfo('template_directory'); 
+																							?>/images/pic02.jpg" alt="" /></a> -->
+										<a href="#" class="image featured">
+											<?php
+											// check if the post has a Post Thumbnail assigned to it.
+											// https://codex.wordpress.org/Post_Thumbnails
+											if (has_post_thumbnail()) {
+												the_post_thumbnail('category-thumb-374-260', array('class' => 'alignleft'));
+											}
+											?>
+										</a>
 
 										<header>
 											<!-- 
@@ -104,7 +116,9 @@
 						query_posts(
 							array(
 								"posts_per_page" => 2,
-								"category_name" => "blog"
+								"category_name" => "blog",
+								"orderby" => "title",
+								"order" => "ASC"
 							)
 						);
 						?>
@@ -118,7 +132,7 @@
 											// check if the post has a Post Thumbnail assigned to it.
 											// https://codex.wordpress.org/Post_Thumbnails
 											if (has_post_thumbnail()) {
-												the_post_thumbnail('category-thumb');
+												the_post_thumbnail('category-thumb-580-272');
 											}
 											?>
 										</a>

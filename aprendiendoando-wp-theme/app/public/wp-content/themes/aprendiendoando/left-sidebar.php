@@ -1,3 +1,5 @@
+<?php /* Template Name: Left sidebar */ ?>
+
 <!-- Header -->
 <?php get_header('nohome'); ?>
 
