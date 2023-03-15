@@ -1,4 +1,15 @@
 <?php
+/**
+ * Activando el soporte para los sidebar
+ * https://codex.wordpress.org/es:API_de_Widget
+ */
+
+use Yoast\WP\SEO\Presenters\Admin\Sidebar_Presenter;
+
+if (function_exists('register_sidebar(  )')) {
+    
+}
+
 
 /* 
 Activando el soporte para las imágenes
