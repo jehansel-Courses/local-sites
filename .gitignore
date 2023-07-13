@@ -86,6 +86,9 @@
 # BSA Councils theme
 /bsa-councils/
 # =============================================================
+# BSA scouting.org
+/bsa-child/
+# =============================================================
 # Archivos
 desktop.ini
 # .gitignore
