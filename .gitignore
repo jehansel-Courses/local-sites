@@ -83,6 +83,9 @@
 # Exploring.org Production
 /exploring/
 # =============================================================
+# BSA Councils theme
+/bsa-councils/
+# =============================================================
 # Archivos
 desktop.ini
 # .gitignore
