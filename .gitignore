@@ -60,12 +60,20 @@
 /decodecms/app/public/license.txt
 /decodecms/app/public/readme.html
 /decodecms/app/public/wp-admin/
-# /decodecms/app/public/wp-content/
+# ===========================================================
+# 2023.07.29
+# REVISAR PORQUE ESTABA COMENTADO LA SIGUIENTE LÍNEA, NO RECUERDO
+/decodecms/app/public/wp-content/
+# ===========================================================
 /decodecms/app/public/wp-includes/
 
 /decodecms/app/public/wp-content/*.php
 /decodecms/app/public/wp-content/plugins/
-# /decodecms/app/public/wp-content/themes/
+# ===========================================================
+# 2023.07.29
+# REVISAR PORQUE ESTABA COMENTADO LA SIGUIENTE LÍNEA, NO RECUERDO
+/decodecms/app/public/wp-content/themes/
+# ===========================================================
 /decodecms/app/public/wp-content/upgrade/
 /decodecms/app/public/wp-content/uploads/
 
